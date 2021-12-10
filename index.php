@@ -21,11 +21,35 @@
         }
     }
 
+    class Dog extends Animal{
+        protected $hair_color="black";
 
-    $animal = new Animal();
-    echo $animal->getAge();
+        public function getColor(){
+            return $this->hair_color;
+        }
+        public function setColor($color){
+            $this->hair_color=$color;
+        }
+        public function getAge(){
+            echo "年齡:".$this->age;
+        }
+    }
+
+    $cat =new Animal;
+    echo "cat".$cat->getAge();
+    $dog =new Dog;
+    echo $dog->getAge();
     echo "<br>";
-    $animal->setAge(11500);
-    echo $animal->getAge();
+    $dog->setAge(15236);
+    echo $dog->getAge();
     echo "<br>";
+    echo $dog->getColor();
+    echo "<br>";
+    echo $dog->setColor("red");
+    echo $dog->getColor();
+    echo "<br>";
+    $dog->getAge();
+    echo "cat".$cat->getAge();
+
+
 ?>
